@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			if (!Array.isArray) {
+			  Array.isArray = function(arg) {
+			    return Object.prototype.toString.call(arg) === '[object Array]';
+			  };
+			}
+		</script>
+		<script type="text/javascript" src="../../react-0.13.0/build/react.js"></script>
+	</head>
+	<body>
+		<div id="example"></div>
+		<script src="build/helloworld.js"></script>
+	</body>
+</html>
