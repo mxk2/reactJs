@@ -10,11 +10,11 @@
 var CommentBox = Reqct.createClass({
 	render: function(){
 		return (
-			<div className="commentBox">
-				<h1>Comments</h1>
-				<CommentList />
-				<CommentForm />
-			</div>
+			React.createElement("div", {className: "commentBox"}, 
+				React.createElement("h1", null, "Comments"), 
+				React.createElement(CommentList, null), 
+				React.createElement(CommentForm, null)
+			)
 		);
 	}
 });

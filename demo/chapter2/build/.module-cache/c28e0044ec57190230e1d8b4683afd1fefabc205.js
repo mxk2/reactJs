@@ -8,15 +8,13 @@
  *     - Comment
  *   - CommentForm
  */
-var Comment = React.createClass({
+var CommentList = React.createClass({displayName: "CommentList",
 	render: function(){
 		return (
-			<div className="comment">
-				<h2 className="commentAuthor">
-					{this.props.author}
-				</h2>
-				{this.props.children}
-			</div>
+			React.createElement("div", {className: "commentList"}, 
+				React.createElement(Comment, {author: "Pete Hunt"}, "This is one comment"), 
+				React.createElement(Comment, {author: "Jordan Wake"}, "This is *author* comment")
+			)
 		);
 	}
 });

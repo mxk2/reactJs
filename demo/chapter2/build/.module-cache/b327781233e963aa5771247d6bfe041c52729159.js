@@ -8,15 +8,15 @@
  *     - Comment
  *   - CommentForm
  */
-var Comment = React.createClass({
+var Comment = React.createClass({displayName: "Comment",
 	render: function(){
 		return (
-			<div className="comment">
-				<h2 className="commentAuthor">
-					{this.props.author}
-				</h2>
-				{this.props.children}
-			</div>
+			React.createElement("div", {className: "comment"}, 
+				React.createElement("h2", {className: "commentAuthor"}, 
+					this.props.author
+				), 
+				this.props.children
+			)
 		);
 	}
 });
