@@ -8,6 +8,6 @@
  *   - CommentForm
  */
 ReactDOM.render(
-  <CommentBox url="/api/comments" />,
+  React.createElement(CommentBox, {url: "/api/comments"}),
   document.getElementById('content')
 );

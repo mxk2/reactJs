@@ -1,3 +1,12 @@
+/**
+ * 制作组件：
+ * 接入数据模型
+ * 
+ * - CommentBox
+ *   - CommentList
+ *     - Comment
+ *   - CommentForm
+ */
 var CommentBox = React.createClass({
 	render: function(){
 		return (

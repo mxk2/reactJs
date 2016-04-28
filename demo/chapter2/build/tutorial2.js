@@ -1,3 +1,12 @@
+/**
+ * 制作组件：
+ * 为CommentList和CommentForm搭建骨架。
+ * 
+ * - CommentBox
+ *   - CommentList
+ *     - Comment
+ *   - CommentForm
+ */
 var CommentList = React.createClass({displayName: "CommentList",
 	render: function(){
 		return (

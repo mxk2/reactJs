@@ -7,7 +7,7 @@
  *     - Comment
  *   - CommentForm
  */
-ReactDOM.render(
-  <CommentBox url="/api/comments" />,
-  document.getElementById('content')
-);
+/*ReactDOM.render({
+	<CommentBox url="/api/comments" />,
+	document.getElementById('content')
+});*/
