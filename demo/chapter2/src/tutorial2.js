@@ -7,7 +7,7 @@
  *     - Comment
  *   - CommentForm
  */
-var CommentList = React.createClass({
+/*var CommentList = React.createClass({
 	render: function(){
 		return (
 			<div className="commentList">
@@ -15,7 +15,7 @@ var CommentList = React.createClass({
 			</div>
 		);
 	}
-});
+});*/
 
 var CommentForm = React.createClass({
 	render: function(){

@@ -9,6 +9,7 @@
  */
 var CommentList = React.createClass({displayName: "CommentList",
 	render: function(){
+		debugger;
 		var commentNodes = this.props.data.map(function(comment){
 			return (
 				React.createElement(Comment, {author: comment.author, key: comment.author}, 

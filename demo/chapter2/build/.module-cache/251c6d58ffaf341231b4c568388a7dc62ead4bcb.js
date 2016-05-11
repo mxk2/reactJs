@@ -7,8 +7,9 @@
  *     - Comment
  *   - CommentForm
  */
-var CommentBox = React.createClass({
+var CommentBox = React.createClass({displayName: "CommentBox",
 	loadCommentsFromServer: function(){
+		debugger;
 		$.ajax({
 			url: this.props.url,
 			dataType: 'json',
@@ -32,15 +33,15 @@ var CommentBox = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="commentBox">
-				<h1>Comments</h1>
-				<CommentList data={this.state.data} />
-				<CommentForm />
-			</div>
+			React.createElement("div", {className: "commentBox"}, 
+				React.createElement("h1", null, "Comments"), 
+				React.createElement(CommentList, {data: this.state.data}), 
+				React.createElement(CommentForm, null)
+			)
 		);
 	}
 });
 ReactDOM.render(
-  <CommentBox url="../data/comments.json" pollInterval={2000} />,
+  React.createElement(CommentBox, {url: "../../data/comments", pollInterval: 2000}),
   document.getElementById('content')
 );
