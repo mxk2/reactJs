@@ -14,6 +14,7 @@ var CommentBox = React.createClass({
 			dataType: 'json',
 			cache: false,
 			success: function(data){
+				//动态更新页面的关键点就是调用this.setState()
 				this.setState({data: data});
 			}.bind(this),
 			error: function(xhr, status, err){
