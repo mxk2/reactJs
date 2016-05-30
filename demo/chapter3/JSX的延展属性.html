@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var props = {};
+        props.foo = x;
+        props.bar = y;
+        var component = <Component {...props} />;
+    </script>
+    <p>延展属性可以被多次使用，也可以和其他属性一起使用。顺序很重要，后面的会覆盖掉前面的。</p>
+    <script>
+        var props = {foo: 'default'};
+        var component = <Component {...props} foo={'override'}>;
+        console.log(component.props.foo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>HTML标签和React组件对比</h1>
+    <script>
+        var myDivElement = <div className="foo" />;
+        React.render(myDivElement, document.body);
+    </script>
+    <script>
+        var MyComponent = React.createClass({});
+        var myElement = <MyComponent someProperty={true} />;
+        React.render(myElement, document.body);
+    </script>
+    <p>React的JSX里约定分别使用首字母大小写来区分本地组件的类型和HTML标签。</p>
+    <h1>转换</h1>
+    <script>
+        var Nav;
+        //输出JSX
+        var app = <Nav color="blue">;
+        //输出JS
+        var app = React.createElement(Nav, {color: "blue"});
+    </script>
+    <p>JSX使用XML语法定义子结点</p>
+    <script>
+        var Nav, Profile;
+        //输出JSX
+        var app = <Nav color="blue"><Profile>click</Profile></Nav>;
+        //输出js
+        var app = React.createElement(
+            Nav,
+            { color: "blue"},
+            React.createElement(Profile, null, "click")
+        );
+    </script>
+    <h1>JavaScript表达式</h1>
+    <p>属性表达式</p>
+    <script>
+        //输入JSX
+        var person = <Person name={window.isLoggedIn ? window.name : ""} />;
+        //输出js
+        var person = React.createClass(
+                Person,
+                {name: window.isLoggedIn ? window.name : ""}
+        );
+    </script>
+    <p>子节点表达式</p>
+    <script>
+        //输入JSX
+        var content = <Container>{window.isLoggedIn? <Nav /> : <Login />}</Container>;
+        //输入js
+        var content = React.createElement(
+                Container,
+                null,
+                window.isLoggedIn ? React.createElement(Nav) : React.createElement(Login)
+        );
+    </script>
+</body>
+</html>
